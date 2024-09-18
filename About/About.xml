@@ -9,7 +9,9 @@
 	<packageId>JoeOwnage67.Quest.Control</packageId>  
 	
 	<loadAfter>
-		<li>brrainz.harmony</li>		
+		<li>brrainz.harmony</li>
+		<li>Mlie.RimQuest</li>
+		<li>DankPyon.Medieval.Overhaul</li>
 	</loadAfter>
 
 	<modDependencies>
