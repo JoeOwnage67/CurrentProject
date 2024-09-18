@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Joe's RPG Adventure Flavour Pack Custom Patches</name>
+	<author>Joe Daly</author>
+	<url>https://github.com/JoeOwnage67/</url>
+	<supportedVersions>        	
+			<li>1.5</li>
+    </supportedVersions>
+	<packageId>JoeDaly.CustomPatches.RPG</packageId>
+  
+	<loadAfter>
+		<li>MrSamuelStreamer.RPGAdventureFlavour</li>	
+		<li>DankPyon.Medieval.Overhaul</li>
+		<li>JoeDaly.MedMeds.MO</li>
+		<li>Sabrael.FRBELoxo</li>
+        <li>Rebuild.COTR.DoorsandCorners</li>       
+        <li>zal.eyeprosthetics</li>		
+		<li>RedMattis.BetterPrerequisites</li>	
+		<li>RedMattis.BigSmall.Core</li>
+		<li>Wara.toomanymods</li>
+		<li>pphhyy.BoneReapers</li>
+		<li>Sabrael.FRBEGnolls</li>
+		<li>BotchJob.medievalfantasyquestrewards</li>
+		<li>LTS.PG</li>
+	</loadAfter>
+
+	<modDependencies>	  
+	  <li>
+			<packageId>MrSamuelStreamer.RPGAdventureFlavour</packageId>
+			<displayName>RPG Adventure Flavour Pack</displayName>
+	  </li>
+	  <li>
+			<packageId>zal.eyeprosthetics</packageId>
+			<displayName>[CZK] Eye Prosthetics (Continued)</displayName>
+		</li>
+			
+	</modDependencies>
+	<description>Custom Patches for RPG Adventure Flavour Pack</description>
+</ModMetaData>
