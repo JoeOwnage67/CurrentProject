@@ -12,7 +12,8 @@ public class QuestFrequencyMod : Mod
         Listing_Standard listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
 
-        foreach (var questDef in DefDatabase<QuestScriptDef>.AllDefs)
+        var allQuestDefs = QuestLoader.GetAllQuestDefs();
+        foreach (var questDef in allQuestDefs)
         {
             bool enabled = settings.questEnabled.TryGetValue(questDef.defName, out bool value) ? value : true;
             listingStandard.CheckboxLabeled(questDef.label, ref enabled);
