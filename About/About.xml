@@ -25,5 +25,5 @@
 		</li>	  
 	</modDependencies>
 	
-	<description>Gives you control which quests can fire during your Rimworld run. Put it at the bottom of your load order before Rocketman.</description>	
+	<description>Gives you control which quests can fire during your Rimworld run. Put it at the bottom of your load order before Rocketman, or it will probably miss some quests.</description>	
 </ModMetaData>
