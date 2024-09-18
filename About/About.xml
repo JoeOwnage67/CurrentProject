@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Joe's RPG Adventure Flavour Pack Custom Patches</name>
-	<author>Joe Daly</author>
+	<name>Quest Control</name>
+	<author>JoeOwnage67</author>
 	<url>https://github.com/JoeOwnage67/</url>
 	<supportedVersions>        	
 			<li>1.5</li>
     </supportedVersions>
-	<packageId>JoeDaly.CustomPatches.RPG</packageId>
-  
+	<packageId>JoeOwnage67.Quest.Control</packageId>  
+	
 	<loadAfter>
-		<li>MrSamuelStreamer.RPGAdventureFlavour</li>	
-		<li>DankPyon.Medieval.Overhaul</li>
-		<li>JoeDaly.MedMeds.MO</li>
-		<li>Sabrael.FRBELoxo</li>
-        <li>Rebuild.COTR.DoorsandCorners</li>       
-        <li>zal.eyeprosthetics</li>		
-		<li>RedMattis.BetterPrerequisites</li>	
-		<li>RedMattis.BigSmall.Core</li>
-		<li>Wara.toomanymods</li>
-		<li>pphhyy.BoneReapers</li>
-		<li>Sabrael.FRBEGnolls</li>
-		<li>BotchJob.medievalfantasyquestrewards</li>
-		<li>LTS.PG</li>
+		<li>brrainz.harmony</li>		
 	</loadAfter>
 
-	<modDependencies>	  
-	  <li>
-			<packageId>MrSamuelStreamer.RPGAdventureFlavour</packageId>
-			<displayName>RPG Adventure Flavour Pack</displayName>
-	  </li>
-	  <li>
-			<packageId>zal.eyeprosthetics</packageId>
-			<displayName>[CZK] Eye Prosthetics (Continued)</displayName>
-		</li>
-			
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>	  
 	</modDependencies>
-	<description>Custom Patches for RPG Adventure Flavour Pack</description>
+	
+	<description>Gives you control which quests can fire during your Rimworld run.</description>	
 </ModMetaData>
