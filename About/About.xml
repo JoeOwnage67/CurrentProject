@@ -15,8 +15,8 @@
 
 	<loadBefore>
 		<li>krkr.rocketman</li>
-        </loadBefore>
-        <modDependencies>
+    </loadBefore>
+    <modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
