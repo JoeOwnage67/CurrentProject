@@ -7,3 +7,4 @@ public class QuestSettings : ModSettings //This indicates that QuestSettings inh
         base.ExposeData(); //Calls the base class’s ExposeData method to ensure any additional data managed by the base class is also saved and loaded.
     }
 }
+//This class is designed to manage the settings for quests in RimWorld. It uses a dictionary to keep track of which quests are enabled or disabled and provides a method to save and load these settings.
