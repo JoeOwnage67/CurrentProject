@@ -24,6 +24,6 @@ public class QuestFrequencyMod : Mod//QuestFrequencyMod: This class inherits fro
         base.DoSettingsWindowContents(inRect);//Calls the base class method.
     }
 
-    public override string SettingsCategory() => "Quest Frequency Control";//Returns the name of the settings category as “Quest Frequency Control”.
+    public override string SettingsCategory() => "Quest Control";//Returns the name of the settings category as “Quest Control”.
 }
 //The QuestFrequencyMod class is designed to manage the frequency of quests in RimWorld. It provides a user interface for enabling or disabling specific quests and saves these settings. The class uses a static QuestSettings object to store the settings and overrides methods to customize the settings window and category name.
