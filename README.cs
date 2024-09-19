@@ -71,19 +71,20 @@ public static class QuestLoader
 }
 
 using HarmonyLib;
+using HarmonyLib;
 using Verse;
 using RimWorld;
 
 [HarmonyPatch(typeof(QuestManager))]
-[HarmonyPatch("GenerateQuest")]
-public static class QuestManager_GenerateQuest_Patch
+[HarmonyPatch("Add")]
+public static class QuestManager_Add_Patch
 {
-    static bool Prefix(QuestScriptDef questDef, ref bool __result)
+    static bool Prefix(Quest quest)
     {
-        Log.Message($"Patching GenerateQuest for {questDef.defName}");
-        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(questDef.defName, out bool enabled) && !enabled)
+        Log.Message($"Patching Add for {quest.ToStringSafe()}");
+        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(quest.def.defName, out bool enabled) && !enabled)
         {
-            __result = false;
+            Log.Message($"Quest {quest.def.defName} is disabled by settings.");
             return false;
         }
         return true;
