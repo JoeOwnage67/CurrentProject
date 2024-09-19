@@ -80,11 +80,14 @@ public static class QuestManager_Add_Patch
 {
     static bool Prefix(Quest quest)
     {
-        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(quest.def.defName, out bool enabled) && !enabled)
+        Log.Message($"Patching Add for {quest.ToStringSafe()}");
+
+        // Access the quest definition using the 'root' field
+        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(quest.root.defName, out bool enabled) && !enabled)
         {
+            Log.Message($"Quest {quest.root.defName} is disabled by settings.");
             return false;
         }
         return true;
     }
 }
-
