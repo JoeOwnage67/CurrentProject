@@ -1,0 +1,16 @@
+C:\Users\joe_h\source\repos\QuestControl\obj\Debug\QuestControl.csproj.AssemblyReference.cache
+C:\Users\joe_h\source\repos\QuestControl\obj\Debug\QuestControl.csproj.CoreCompileInputs.cache
+C:\Users\joe_h\source\repos\QuestControl\1.5\Assemblies\QuestControl.dll
+C:\Users\joe_h\source\repos\QuestControl\1.5\Assemblies\0Harmony.dll
+C:\Users\joe_h\source\repos\QuestControl\obj\Debug\QuestCon.C2EDF1D5.Up2Date
+C:\Users\joe_h\source\repos\QuestControl\obj\Debug\QuestControl.dll
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\bin\Debug\QuestControl.dll
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\bin\Debug\QuestControl.pdb
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\bin\Debug\0Harmony.dll
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\obj\Debug\QuestControl.csproj.AssemblyReference.cache
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\obj\Debug\QuestControl.csproj.CoreCompileInputs.cache
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\obj\Debug\QuestCon.C2EDF1D5.Up2Date
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\obj\Debug\QuestControl.dll
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\Source\obj\Debug\QuestControl.pdb
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\1.5\Assemblies\QuestControl.dll
+F:\SteamLibrary\steamapps\common\RimWorld\joemodding\Quest Control\1.5\Assemblies\QuestControl.pdb
