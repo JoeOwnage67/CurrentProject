@@ -6,7 +6,7 @@
 //3. I want the mod options written to the config file when the user clicks on a save button at the bottom of the options.
 //4. I want to make a harmony prefix patch that will disable or enable the QuestScriptDefs according to the config file using "com.joeownage.questcontrol".
 
-//CollectQuestScriptDefs.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs)
+//CollectQuestScriptDefs.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
@@ -24,7 +24,7 @@ public class QuestControl : Mod
     }
 }
 
-//CreateModOptions.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs)
+//CreateModOptions.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using UnityEngine;
 using Verse;
 
@@ -77,8 +77,7 @@ public class QuestControlMod : Mod
 
     public override string SettingsCategory() => "Quest Control";
 }
-
-//HarmonyPrefixPatch.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs)
+//HarmonyPrefixPatch.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using HarmonyLib;
 using Verse;
 
