@@ -1,6 +1,7 @@
 //CurrentProject
 //the current thing I am developing
 
+//QuestSettings.cs
 using System.Collections.Generic;
 using Verse;
 
@@ -15,6 +16,7 @@ public class QuestSettings : ModSettings
     }
 }
 
+// /QuestFrequencyMod.cs
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
@@ -58,6 +60,7 @@ public class QuestFrequencyMod : Mod
     public override string SettingsCategory() => "Quest Control";
 }
 
+//QuestLoader.cs
 using System.Collections.Generic;
 using Verse;
 using RimWorld;
@@ -70,6 +73,26 @@ public static class QuestLoader
     }
 }
 
+//CustomQuestGen.cs
+using RimWorld;
+using Verse;
+
+public static class CustomQuestGen
+{
+    public static void GenerateQuest(QuestScriptDef questScriptDef, Slate slate)
+    {
+        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(questScriptDef.defName, out bool enabled) && !enabled)
+        {
+            Log.Message($"Quest {questScriptDef.defName} is disabled by settings.");
+            return;
+        }
+
+        Quest quest = QuestGen.Generate(questScriptDef, slate);
+        Find.QuestManager.Add(quest);
+    }
+}
+
+//QuestManager_Add_Patch.cs
 using HarmonyLib;
 using Verse;
 using RimWorld;
@@ -80,14 +103,10 @@ public static class QuestManager_Add_Patch
 {
     static bool Prefix(Quest quest)
     {
-        Log.Message($"Patching Add for {quest.ToStringSafe()}");
-
-        // Access the quest definition using the 'root' field
-        if (QuestFrequencyMod.settings.questEnabled.TryGetValue(quest.root.defName, out bool enabled) && !enabled)
-        {
-            Log.Message($"Quest {quest.root.defName} is disabled by settings.");
-            return false;
-        }
-        return true;
+        var slate = new Slate();
+        CustomQuestGen.GenerateQuest(quest.def, slate);
+        return false; // Prevent the original method from running
     }
 }
+
+
