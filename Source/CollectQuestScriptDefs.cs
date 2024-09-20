@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
+using RimWorld.QuestGen;
 
 public class QuestControl : Mod
 {
