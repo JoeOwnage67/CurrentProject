@@ -9,6 +9,7 @@
 //CollectQuestScriptDefs.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using System.Collections.Generic;
 using RimWorld;
+using RimWorld.QuestGen;
 using Verse;
 
 public class QuestControl : Mod
@@ -27,6 +28,9 @@ public class QuestControl : Mod
 //CreateModOptions.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using UnityEngine;
 using Verse;
+using RimWorld;
+using RimWorld.QuestGen;
+
 
 public class QuestControlSettings : ModSettings
 {
@@ -80,6 +84,8 @@ public class QuestControlMod : Mod
 //HarmonyPrefixPatch.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
 using HarmonyLib;
 using Verse;
+using RimWorld;
+using RimWorld.QuestGen;
 
 [StaticConstructorOnStartup]
 public static class QuestControlPatcher
