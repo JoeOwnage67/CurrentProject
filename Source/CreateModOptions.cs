@@ -1,5 +1,7 @@
 using UnityEngine;
 using Verse;
+using RimWorld;
+using RimWorld.QuestGen;
 
 public class QuestControlSettings : ModSettings
 {
