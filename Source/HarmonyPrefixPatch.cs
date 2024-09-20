@@ -1,5 +1,7 @@
 using HarmonyLib;
 using Verse;
+using RimWorld;
+using RimWorld.QuestGen;
 
 [StaticConstructorOnStartup]
 public static class QuestControlPatcher
