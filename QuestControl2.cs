@@ -27,11 +27,10 @@ public static class QuestControl
 }
 
 //CreateModOptions.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
+// CreateModOptions.cs
 using UnityEngine;
 using Verse;
 using RimWorld;
-using RimWorld.QuestGen;
-
 
 public class QuestControlSettings : ModSettings
 {
@@ -58,22 +57,31 @@ public class QuestControlMod : Mod
         settings = GetSettings<QuestControlSettings>();
     }
 
+    // This is where you put the updated code for DoSettingsWindowContents
     public override void DoSettingsWindowContents(Rect inRect)
     {
         Listing_Standard listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
         listingStandard.Label("Quest Control");
 
-        foreach (var quest in QuestControl.QuestControlQuestList)
+        if (QuestControl.QuestControlQuestList.Count == 0)
         {
-            bool enabled = settings.questEnabled.ContainsKey(quest.Key) ? settings.questEnabled[quest.Key] : true;
-            listingStandard.CheckboxLabeled(quest.Value.label, ref enabled);
-            settings.questEnabled[quest.Key] = enabled;
+            listingStandard.Label("No quests found.");
         }
-
-        if (listingStandard.ButtonText("Save"))
+        else
         {
-            settings.Save();
+            foreach (var quest in QuestControl.QuestControlQuestList)
+            {
+                bool enabled = settings.questEnabled.ContainsKey(quest.Key) ? settings.questEnabled[quest.Key] : true;
+                // Use quest.Key (defName) instead of quest.Value.label to display the defName
+                listingStandard.CheckboxLabeled(quest.Key, ref enabled);
+                settings.questEnabled[quest.Key] = enabled;
+            }
+
+            if (listingStandard.ButtonText("Save"))
+            {
+                settings.Save();
+            }
         }
 
         listingStandard.End();
