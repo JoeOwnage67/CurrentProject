@@ -7,16 +7,17 @@
 //4. I want to make a harmony prefix patch that will disable or enable the QuestScriptDefs according to the config file using "com.joeownage.questcontrol".
 
 //CollectQuestScriptDefs.cs (checked against QuestScriptDef.cs and DefDatabase.cs and ModSettings.cs and Listing_Standard.cs and QuestUtility.cs and LoadedModManager.cs and Scribe_Collections.cs)
+// CollectQuestScriptDefs.cs
 using System.Collections.Generic;
 using RimWorld;
-using RimWorld.QuestGen;
 using Verse;
 
-public class QuestControl : Mod
+[StaticConstructorOnStartup]
+public static class QuestControl
 {
     public static Dictionary<string, QuestScriptDef> QuestControlQuestList = new Dictionary<string, QuestScriptDef>();
 
-    public QuestControl(ModContentPack content) : base(content)
+    static QuestControl()
     {
         foreach (var def in DefDatabase<QuestScriptDef>.AllDefs)
         {
